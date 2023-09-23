@@ -52,3 +52,11 @@ shortcuts for creating list in unordered lists
 ul>li*{no of li elements}>{any lement}
 eg:-
 ul>li*6>a
+
+
+media queries for responsive 
+major breakpoints are:-
+1:- above  991px (sccren size greter than this is for large devices)
+    below 991px are the small ones 
+2:-767 or size smaller than this are for medium devices.
+3:-479 and the ones smaller then this are for mobile phones.

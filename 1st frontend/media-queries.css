@@ -1,0 +1,16 @@
+/* media queries */
+@media screen  and (max-width: 1124px) {
+    .nav-toggle{
+        display: block;
+        margin-right: 20px;
+    }
+    .nav-links{
+        display: none;
+    }
+
+    .cardss{
+        width: 550px;
+    }
+    .example{
+        gap:20px;   }
+}

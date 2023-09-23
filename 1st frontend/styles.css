@@ -57,6 +57,7 @@ a{
     max-width: 2200px;
     margin-inline:auto;  /* Horizontally center the element */
     padding: var(--padding-inline-section);
+    overflow:hidden;
     }
 
 .flex{
@@ -141,6 +142,9 @@ li{
 .nav-links ul{
     justify-content:end;
     gap:40px;
+}
+.nav-toggle{
+   display: none;
 }
 
 /* header section */
@@ -401,6 +405,7 @@ li{
 }
 .yo{
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .text-1{
@@ -543,3 +548,4 @@ li{
 .car-3 span a{
     font-size: 1.3rem;
 }
+

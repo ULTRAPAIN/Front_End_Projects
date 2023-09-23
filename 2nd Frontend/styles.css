@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@900&family=Montserrat:wght@500;600;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* utility class */
+
+.flex{
+    display:flex;
+}
+.flex-co{
+    display:flex;
+    flex-direction: column;
+}
+/* nav  */
+
+.nav{
+    display: flex;
+    height:150px;
+    width: 100%;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    position: fixed;
+    padding: 0px 150px;
+    z-index: 99;
+}
+
+.nav img{
+    width:50px;
+}
+.nav-ele{
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-ele h4{
+    font-size: 25px;
+}
+.cursor{
+    width:20px;
+    height:20px;
+    position:fixed;
+    border-radius: 50%;
+    background-color: #95C11E;
+    z-index: 99;
+}
+
+.cursor-blur{
+    width:400px;
+    height: 400px;
+    position:fixed;
+    border-radius: 50%;
+    background-color:#96c11e46;
+    filter: blur(50px);
+    z-index: 9;
+}
+.bg-video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+/* main part  */
+
+.main{
+position:relative;
+ background-color:rgba(0, 0, 0, 0.372); 
+ height: 100vh;
+}
+
+.page-1{
+    position: relative;
+    height:100vh;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    z-index:10;
+}
+
+.page-1 h1{
+    position:relative;
+    font-size: 200px;
+    font-weight:900;
+}
+.page-1 h2{
+    font-size: 40px;
+    font-weight:900;
+    margin-bottom: 30px;
+}
+.page-1 p{
+    font-size: 30px;
+    font-weight:500;
+    width: 30%;
+    text-align: center;
+}
+
+.page-1 h1:before{
+    content: "EAT. DRINK. PLAY. ";
+    position: absolute;
+    color:black;
+    -webkit-text-stroke: 2px #95C11E;
+    top:-6px;
+    left:-6px;
+    z-index: -1;
+}
+
+/* page2 */
+
+.page2{
+    min-height: 100vh;
+    width:100%;
+    background-color: rgb(0, 0, 0,0.372);
+    z-index:11;
+}
+ 
+.scroller{
+white-space: nowrap;
+overflow-x: hidden;
+overflow-y: hidden;
+position: relative;
+z-index: 10;
+
+}
+
+.scroller h4{
+    display: inline-block;
+    font-size: 140px;
+    font-weight: 900;
+    margin-right:100px;
+    color: transparent;
+    -webkit-text-stroke: 2px #95C11E;
+    font-family: Geologica;
+    transition: all linear 0.4s;
+
+}
+
+.scroller h4:hover{
+    color: #95C11E;
+}
+
+.scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll;
+    animation-duration: 18s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.about-us{
+    position:relative;
+     height:40vh;
+     width: 100%;
+     /* background-color: red; */
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 100px;
+}
+
+.about-us-in{
+    width:40%;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:40px;
+
+}
+.about-us img{
+    height: 270px;
+    width:270px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.about-us-in h3{
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.about-us-in p{
+    font-size: 20px;
+    line-height: 26px;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+#cards-container{
+    height:60vh;
+    display:flex;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: center;
+    gap:70px;
+    position: relative;
+    z-index: 10;
+}
+
+.cards{
+    height:80%;
+    /* background-color: blue; */
+    width:22%;
+    border-radius: 20px;
+    background-position: center;
+    overflow: hidden;
+}
+
+#card1{
+    background-image: url(./assets/card1.avif);
+    background-size: cover;
+}
+#card2{
+    background-image: url(./assets/card2.webp);
+    background-size: cover;
+}
+#card3{
+    background-image: url(./assets/card3.avif);
+    background-size: cover;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding: 30px ;
+    padding-top: 160px;
+    opacity:0;
+    transition: all ease 0.6s;
+}
+
+.overlay h4{
+    color:#000;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    font-weight: 800;
+}
+
+.overlay p{
+    color: #000;
+    font-size: 18px;
+}
+.cards:hover .overlay{
+    opacity: 1;
+}
+
+.cards:hover{
+    transform: rotate3d(-1,0,0,20deg);
+}
+
+#green-div{
+    height:35vh;
+    width:100%;
+    background:linear-gradient(to left bottom,#42AC30,#A9DB22);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#green-div img{
+    height:350px;
+    width:200px;
+    object-fit: cover;
+}
+
+#green-div h2{
+    width:40%;
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+    font-weight: 800;
+    line-height: 45px;
+
+}
+
+#page-3{
+    height: 100vh;
+    width:100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page-3 p{
+    font-size: 35px;
+    font-weight: 700;
+    width: 60%;
+    text-align: center;
+    line-height: 60px;
+
+}
+
+#page-3 img{
+    position: absolute;
+    height: 100px;
+}
+
+#page-3 #colon1{
+    left:15%;
+    top:25%
+}
+
+
+#page-3 #colon2{
+    right:15%;
+    bottom:30%
+}
+
+#page-4{
+    position: relative;
+    height: 50vh;
+    width:100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #000;
+    gap:50px;
+}
+
+/* .container{
+    height:70%;
+    width:100%;
+     /* position: absolute; */
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:50px; 
+    /* align-items: center; */
+/* } */
+.elem1{
+width:25%;
+height:25vh;
+border-radius: 30px;
+background-color:#B2E624;
+text-align: center;
+display:flex;
+align-items:end;
+justify-content: center;
+z-index: 10;
+
+}
+
+.overlay1 h2{
+font-size: 65px;
+color: #000;
+font-weight: 800;
+}
+
+#image1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-toptracer.jpg?strip=all&lossy=1&sharp=1&w=1152&ssl=1);
+    object-fit: cover;
+    background-size: cover;
+
+}
+
+#image2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-ag.jpg?strip=all&lossy=1&sharp=1&w=1152&ssl=1);
+    object-fit: cover;
+    background-size:cover;
+}
+
+#image3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-lessons.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C683&ssl=1%22);
+    object-fit: cover;
+    background-size: cover;
+}
+
+.overlay1{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding: 30px ;
+    padding-top: 50px;
+    transition: all ease 0.6s;
+    border-radius: 30px;
+
+}
+
+.elem1:hover .overlay1{
+    opacity: 0;
+}
+
+#page-4 h1{
+    font-size:120px;
+    position: absolute;
+    font-weight: 900;
+    top:-8%;
+    color: black;
+    /* font-family: gilroy; */
+    -webkit-text-stroke: 2px #fff;
+}
+
+#footer{
+    height:40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,#42AC30,#A9DB22);
+
+}
